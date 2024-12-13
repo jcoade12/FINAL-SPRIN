@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tree Result</title>
+</head>
+<body>
+    <h1>Tree Visualization</h1>
+    
+    <h2>Indented Tree</h2>
+    <pre th:text="${formattedTree}"></pre>
+
+    <h2>JSON Representation</h2>
+    <pre th:text="${treeJson}"></pre>
+
+    <nav>
+        <a href="/enter-numbers">Enter New Numbers</a> |
+        <a href="/previous-trees">View Previous Trees</a>
+    </nav>
+</body>
+</html>

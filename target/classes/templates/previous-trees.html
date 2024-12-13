@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Previous Trees</title>
+</head>
+<body>
+    <h1>Previous Trees</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Input Numbers</th>
+                <th>Tree JSON</th>
+                <th>Balanced</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="tree : ${trees}">
+                <td th:text="${tree.id}"></td>
+                <td th:text="${tree.inputNumbers}"></td>
+                <td><pre th:text="${tree.treeJson}"></pre></td>
+                <td th:text="${tree.balanced}"></td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="/enter-numbers">Enter New Numbers</a>
+</body>
+</html>
